@@ -1,0 +1,28 @@
+{
+  "root": "apps/usama-ansari-e2e",
+  "sourceRoot": "apps/usama-ansari-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/usama-ansari-e2e/cypress.json",
+        "devServerTarget": "usama-ansari:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "usama-ansari:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/usama-ansari-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["usama-ansari"]
+}

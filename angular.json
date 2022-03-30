@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "usama-ansari": "apps/usama-ansari",
+    "usama-ansari-e2e": "apps/usama-ansari-e2e"
+  }
+}
