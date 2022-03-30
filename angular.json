@@ -1,7 +1,13 @@
 {
   "version": 2,
   "projects": {
+    "piyush-danej": "apps/piyush-danej",
+    "piyush-danej-e2e": "apps/piyush-danej-e2e",
+    "rahul-shaw": "apps/rahul-shaw",
+    "rahul-shaw-e2e": "apps/rahul-shaw-e2e",
     "usama-ansari": "apps/usama-ansari",
-    "usama-ansari-e2e": "apps/usama-ansari-e2e"
+    "usama-ansari-e2e": "apps/usama-ansari-e2e",
+    "vivek-gupta": "apps/vivek-gupta",
+    "vivek-gupta-e2e": "apps/vivek-gupta-e2e"
   }
 }

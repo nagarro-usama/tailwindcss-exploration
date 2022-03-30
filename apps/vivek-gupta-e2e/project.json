@@ -1,0 +1,28 @@
+{
+  "root": "apps/vivek-gupta-e2e",
+  "sourceRoot": "apps/vivek-gupta-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/vivek-gupta-e2e/cypress.json",
+        "devServerTarget": "vivek-gupta:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "vivek-gupta:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/vivek-gupta-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["vivek-gupta"]
+}

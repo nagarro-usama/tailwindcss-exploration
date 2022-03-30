@@ -1,0 +1,28 @@
+{
+  "root": "apps/piyush-danej-e2e",
+  "sourceRoot": "apps/piyush-danej-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/piyush-danej-e2e/cypress.json",
+        "devServerTarget": "piyush-danej:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "piyush-danej:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/piyush-danej-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["piyush-danej"]
+}

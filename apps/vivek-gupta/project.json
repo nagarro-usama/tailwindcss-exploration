@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/vivek-gupta",
+  "sourceRoot": "apps/vivek-gupta/src",
+  "prefix": "tailwindcss-exploration",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/vivek-gupta",
+        "index": "apps/vivek-gupta/src/index.html",
+        "main": "apps/vivek-gupta/src/main.ts",
+        "polyfills": "apps/vivek-gupta/src/polyfills.ts",
+        "tsConfig": "apps/vivek-gupta/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/vivek-gupta/src/favicon.ico",
+          "apps/vivek-gupta/src/assets"
+        ],
+        "styles": ["apps/vivek-gupta/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/vivek-gupta/src/environments/environment.ts",
+              "with": "apps/vivek-gupta/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "vivek-gupta:build:production"
+        },
+        "development": {
+          "browserTarget": "vivek-gupta:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "vivek-gupta:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/vivek-gupta/src/**/*.ts",
+          "apps/vivek-gupta/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/vivek-gupta"],
+      "options": {
+        "jestConfig": "apps/vivek-gupta/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/rahul-shaw",
+  "sourceRoot": "apps/rahul-shaw/src",
+  "prefix": "tailwindcss-exploration",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/rahul-shaw",
+        "index": "apps/rahul-shaw/src/index.html",
+        "main": "apps/rahul-shaw/src/main.ts",
+        "polyfills": "apps/rahul-shaw/src/polyfills.ts",
+        "tsConfig": "apps/rahul-shaw/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/rahul-shaw/src/favicon.ico",
+          "apps/rahul-shaw/src/assets"
+        ],
+        "styles": ["apps/rahul-shaw/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/rahul-shaw/src/environments/environment.ts",
+              "with": "apps/rahul-shaw/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "rahul-shaw:build:production"
+        },
+        "development": {
+          "browserTarget": "rahul-shaw:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "rahul-shaw:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/rahul-shaw/src/**/*.ts",
+          "apps/rahul-shaw/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/rahul-shaw"],
+      "options": {
+        "jestConfig": "apps/rahul-shaw/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

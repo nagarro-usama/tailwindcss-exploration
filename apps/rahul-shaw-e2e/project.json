@@ -1,0 +1,28 @@
+{
+  "root": "apps/rahul-shaw-e2e",
+  "sourceRoot": "apps/rahul-shaw-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/rahul-shaw-e2e/cypress.json",
+        "devServerTarget": "rahul-shaw:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "rahul-shaw:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/rahul-shaw-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["rahul-shaw"]
+}
