@@ -1,4 +1,4 @@
-# TailwindcssExploration
+# TailwindCSS Exploration
 
 This repository is created to explore TailwindCSS and enlist its pros and cons
 
@@ -9,10 +9,10 @@ This repository is created to explore TailwindCSS and enlist its pros and cons
 > Each app corresponds to the research of a contributor in this workspace
 
 Current Contributors:
-1. Usama Ansari
-2. Piyush Danej
-3. Rahul Shaw
-4. Vivek Gupta
+1. [Usama Ansari](https://github.com/nagarro-usama)
+2. [Piyush Danej](https://github.com/PiyushNagarro)
+3. [Rahul Shaw](https://github.com/RahulShaw221994)
+4. [Vivek Gupta](https://github.com/vivek2602-01)
 
 ## References
 
